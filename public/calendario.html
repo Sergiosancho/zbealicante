@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario ZBE Alicante</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- DaisyUI CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {}
+            },
+            daisyui: {
+                themes: ["light"],
+            },
+        }
+    </script>
+    <style>
+        /* Estilos específicos para la página de calendario */
+        .timeline-container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+        
+        .timeline-title {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+        }
+        
+        .timeline-description {
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Personalización de colores para el timeline de DaisyUI */
+        .timeline .timeline-middle svg {
+            background-color: #008080;
+            border-radius: 50%;
+            padding: 4px;
+        }
+        
+        .timeline hr.bg-primary {
+            height: 2px;
+            background-color: #008080 !important;
+            opacity: 0.7;
+        }
+        
+        .timeline-box {
+            background-color: white;
+            border: 1px solid rgba(0, 128, 128, 0.2);
+            border-radius: 0.5rem;
+            padding: 1rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Aseguramos que el timeline tenga suficiente espacio */
+        .timeline.timeline-vertical {
+            width: 100%;
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Menú de navegación -->
+    <nav>
+        <div class="logo">
+            <a href="index.html">
+                <i class="fa-brands fa-algolia"></i> ZBE
+            </a>
+        </div>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="noticias.html">Noticias</a></li>
+            <li><a href="planos.html">Planos</a></li>
+            <li><a href="calendario.html" class="active">Calendario</a></li>
+            <li><a href="./resumen_normativa.html">Resumen normativa</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main>
+        <div class="timeline-container">
+            <h1 class="timeline-title">Calendario de Implementación ZBE Alicante</h1>
+            
+            <div class="timeline-description">
+                <p>A continuación se muestra el cronograma de implementación de la Zona de Bajas Emisiones en Alicante, con las fechas clave y los hitos más importantes del proyecto.</p>
+            </div>
+            
+            <ul class="timeline timeline-vertical">
+                <li>
+                    <div class="timeline-start timeline-box">Diciembre 2023: Aprobación inicial de la Ordenanza ZBE</div>
+                    <div class="timeline-middle">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-white">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <hr class="bg-primary" />
+                </li>
+                <li>
+                    <hr class="bg-primary" />
+                    <div class="timeline-middle">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-white">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <div class="timeline-end timeline-box">Enero 2024: Periodo de información pública y alegaciones</div>
+                    <hr class="bg-primary" />
+                </li>
+                <li>
+                    <hr class="bg-primary" />
+                    <div class="timeline-start timeline-box">Marzo 2024: Aprobación definitiva de la Ordenanza</div>
+                    <div class="timeline-middle">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-white">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <hr class="bg-primary" />
+                </li>
+                <li>
+                    <hr class="bg-primary" />
+                    <div class="timeline-middle">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-white">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <div class="timeline-end timeline-box">Junio 2024: Instalación de señalización y cámaras de control</div>
+                    <hr class="bg-primary" />
+                </li>
+                <li>
+                    <hr class="bg-primary" />
+                    <div class="timeline-start timeline-box">Septiembre 2024: Fase informativa - Sin sanciones</div>
+                    <div class="timeline-middle">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-white">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <hr class="bg-primary" />
+                </li>
+                <li>
+                    <hr class="bg-primary" />
+                    <div class="timeline-middle">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-white">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <div class="timeline-end timeline-box">Enero 2025: Inicio , sin sanciones , sólo informativa</div>
+                </li>
+            </ul>
+            
+            <div class="timeline-description">
+                <h3>Información adicional</h3>
+                <p>Este calendario está sujeto a posibles modificaciones según el desarrollo del proyecto y las decisiones del Ayuntamiento de Alicante. Para más información, consulte la documentación oficial o póngase en contacto con la oficina de atención ciudadana.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <div>
+            <a href="#">Aviso Legal</a>
+        </div>
+        <div class="social-icons">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+        </div>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>

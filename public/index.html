@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZB Alicante</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <!-- Menú de navegación -->
+    <nav >
+        <div class="logo">
+            <a href="index.html">
+                <i class="fa-brands fa-algolia"></i> ZBE
+            </a>
+        </div>
+        <ul>
+            <li><a href="noticias.html">Noticias</a></li>
+            <li><a href="#planos">Planos</a></li>
+            <li><a href="calendario.html">Calendario</a></li>
+            <li><a href="./resumen_normativa.html">Resumen normativa</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main>
+        <h1>Bienvenido a ZBE Alicante</h1>
+        <h3>Descubre cómo estamos trabajando para mejorar la calidad del aire y fomentar una movilidad más sostenible.</h3>
+        <a href="https://www.alicante.es/sites/default/files/documentos/202411/ordenanza_zbe_alicante.pdf" class="button" target="_blank">
+            Ordenanza Municipal
+        </a>
+        <!-- Sección de Formulario de Consulta -->
+    <section class="chat-form">
+        <h2>Consulta sobre la Normativa al GPT especializado</h2>
+        <form id="consulta-form">
+            <textarea placeholder="Escribe tu pregunta aquí..." rows="4"></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+        <div id="respuesta"></div> <!-- Elemento para mostrar la respuesta -->
+    </section>
+
+<script>
+    document.querySelector('#consulta-form').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const question = document.querySelector('textarea').value;
+        const response = await fetch('/ask', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ question })
+        });
+        const data = await response.json();
+        document.getElementById('respuesta').innerText = data.answer; // Muestra la respuesta en la página
+    });
+</script>
+    </section>
+    <!-- Sección Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-image">
+                <img src="DALL·E greenery, clean air, and a bright sunny s.jpg" alt="ZBE Alicante">
+            </div>
+        </div>
+    </section>
+    
+    <div class="card-container">
+        <div class="card">
+            <h2>Noticias</h2>
+            <p>Contenido de la sección Noticias.</p>
+        </div>
+        <div class="card">
+            <h2>Planos</h2>
+            <p>Contenido de la sección Planos.</p>
+        </div>
+        <div class="card">
+            <h2>Calendario</h2>
+            <p>Contenido de la sección Calendario.</p>
+        </div>
+    </div>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <div>
+            <a href="#">Aviso Legal</a>
+        </div>
+        <div class="social-icons">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+        </div>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>

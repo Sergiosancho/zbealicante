@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias - ZBE Alicante</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Los scripts se cargarán al final del body -->
+</head>
+<body>
+    <!-- Menú de navegación -->
+    <nav>
+        <div class="logo">
+            <a href="index.html">
+                <i class="fa-brands fa-algolia"></i> ZBE
+            </a>
+        </div>
+        <ul>
+            <li><a href="noticias.html" class="active">Noticias</a></li>
+            <li><a href="planos.html">Planos</a></li>
+            <li><a href="calendario.html">Calendario</a></li>
+            <li><a href="./resumen_normativa.html">Resumen normativa</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main>
+        <h1>Noticias sobre la Zona de Bajas Emisiones</h1>
+        <h3>Mantente informado sobre las últimas novedades y actualizaciones</h3>
+
+        <section class="noticias-container">
+            <div class="cargando">
+                <p>Cargando noticias sobre la Zona de Bajas Emisiones de Alicante...</p>
+            </div>
+        </section>
+
+        <section class="suscripcion">
+            <h2>Suscríbete a nuestro boletín</h2>
+            <p>Recibe las últimas noticias y actualizaciones sobre la Zona de Bajas Emisiones directamente en tu correo electrónico.</p>
+            <form>
+                <input type="email" placeholder="Tu correo electrónico" required>
+                <button type="submit">Suscribirse</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <div>
+            <a href="#">Aviso Legal</a>
+        </div>
+        <div class="social-icons">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+        </div>
+    </footer>
+    <script src="scripts.js"></script>
+    <script src="scripts/noticias.js"></script>
+</body>
+</html>

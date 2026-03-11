@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plano ZBE Alicante</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        #map {
+            height: 480px;
+            width: 100%;
+            margin: 0 auto 2em auto;
+            border: 2px solid #2c3e50;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(44,62,80,0.2);
+        }
+        .zbe-info {
+            max-width: 700px;
+            margin: 2em auto;
+            padding: 1em;
+            background: #f8f9fa;
+            border-radius: 8px;
+            box-shadow: 0 1px 4px rgba(44,62,80,0.08);
+        }
+        .map-container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Menú de navegación -->
+    <nav>
+        <div class="logo">
+            <a href="index.html">
+                <i class="fa-brands fa-algolia"></i> ZBE
+            </a>
+        </div>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="noticias.html">Noticias</a></li>
+            <li><a href="planos.html" class="active">Planos</a></li>
+            <li><a href="calendario.html">Calendario</a></li>
+            <li><a href="./resumen_normativa.html">Resumen normativa</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main>
+        <div class="map-container">
+            <h1>Mapa interactivo de la Zona de Bajas Emisiones de Alicante</h1>
+            <div id="map"></div>
+            <div class="zbe-info">
+                <h2>Anillo I (Casco Antiguo / Centro Histórico)</h2>
+                <p>
+                    Delimitado por: <b>Rambla de Méndez Núñez</b>, <b>Calle Altamira</b>, <b>Avenida Jaume II</b> y <b>ladera del Benacantil</b>.
+                </p>
+                <p>Esta zona comprende el entramado de las calles más representativas de la época más antigua de la ciudad.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <div>
+            <a href="#">Aviso Legal</a>
+        </div>
+        <div class="social-icons">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="scripts/planos.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
